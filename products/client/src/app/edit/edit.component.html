@@ -1,0 +1,10 @@
+<h2>Edit Product</h2>
+{{ superErrors.message }}
+<div id="form">
+	<form (submit)="edit_prod($event)">
+		<p>Name: <input type="text" name="prodName" [(ngModel)]="edit_product.name"></p>
+		<p>Price: <input type="text" name="prodPrice" [(ngModel)]="edit_product.price"></p>
+		<p>Image URL: <input type="text" name="prodImage" [(ngModel)]="edit_product.image"></p>
+		<input id="button" class="btn btn-primary btn-sm" type="submit" name="edit_prod">
+	</form>
+</div>

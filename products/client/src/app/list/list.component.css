@@ -1,0 +1,21 @@
+#products img {
+	width: 250px;
+	height: 200px;
+}
+
+#products {
+	/*border: 2px solid black;*/
+	display: inline-block;
+	margin-top: 15px;
+	margin-right: 10px;
+}
+
+#container {
+	width: 800px;
+	margin-left: 20%;
+}
+
+p {
+	margin-bottom: 0px;
+}
+

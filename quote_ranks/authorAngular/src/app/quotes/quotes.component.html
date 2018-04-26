@@ -1,0 +1,25 @@
+<h3> {{ author.name }}</h3>
+<p><a [routerLink]="['']">Home</a></p>
+<p><a [routerLink]="['/quotes', author._id, 'new']">Add a Quote</a></p>
+<div class="table table-hover">
+	<table>
+		<thead>
+			<tr>
+				<th>Quote</th>
+				<th>Votes</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let element of quotes">
+				<td>{{ element.text }}</td>
+				<td>{{ element.likes }}</td>
+				<div id="buttons">
+					<button class="btn btn-primary btn-sm" (click)="vote_up(element._id)">Vote Up</button>
+					<button class="btn btn-primary btn-sm" (click)="vote_down(element._id)">Vote Down</button>
+					<button class="btn btn-primary btn-sm" (click)="delete_button(element._id)">Delete</button>
+				</div>
+			</tr>
+		</tbody>
+	</table>
+</div>

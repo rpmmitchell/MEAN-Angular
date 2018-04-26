@@ -1,0 +1,9 @@
+<p><a [routerLink]="['']">Home</a></p>
+<h5>Provide a quote by {{ author.name }}</h5>
+<form (submit)="add_quote($event)">
+		<input type="text" name="submit_quote" placeholder="Quote" id="quote_text" [(ngModel)]="new_quote.text">
+		<div id="options">
+			<button class="btn btn-primary btn-md" [routerLink]="['/quotes', author._id]">Cancel</button>
+			<input class="btn btn-primary btn-md" type="submit" name="add_quote">
+		</div>
+</form>

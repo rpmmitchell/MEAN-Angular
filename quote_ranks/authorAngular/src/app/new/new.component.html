@@ -1,0 +1,11 @@
+
+<p><a [routerLink]="['']">Home</a></p>
+<h5>Add a new author:</h5>
+{{ superErrors.message }}
+<form (submit)="submit_author($event)">
+	<input type="text" name="author_name" id="author_text" placeholder="Author" [(ngModel)]="author.name">
+	<div id="options">
+		<input class="btn btn-primary btn-md" type="submit" name="submit_author">
+		<button class="btn btn-primary btn-md" [routerLink]="['']">Cancel</button>
+	</div>
+</form>

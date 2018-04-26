@@ -1,0 +1,10 @@
+
+<h3>Edit author:</h3>
+{{ superErrors.message }}
+<form (submit)="edit($event)">
+	<input type="text" name="edit_author_name.name" id="author_text" [(ngModel)]="edit_author_name.name">
+	<div id="options">
+		<input class="btn btn-primary btn-md" type="submit" name="edit">
+		<button class="btn btn-primary btn-md" [routerLink]="['']">Cancel</button>
+	</div>
+</form>
